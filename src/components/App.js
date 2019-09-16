@@ -5,9 +5,9 @@ import DocumentViewerContainer from '../containers/DocumentViewerContainer';
 
 function App() {
   return (
-    <div className="App">
-      <TagTreeContainer />
+    <div className="App"> 
       <DocumentViewerContainer />
+      <TagTreeContainer />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
+import { addTagToSelectedText } from '../actions';
 import TagTreeComponent from '../components/TagTreeComponent'
 
 const mapStateToProps = state => ({
@@ -8,7 +9,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  //actions: bindActionCreators(TodoActions, dispatch)
+  actions: bindActionCreators({addTagToSelectedText}, dispatch)
 })
 
 
