@@ -12,7 +12,9 @@ export default class DocumentViewerComponent extends Component {
 
   handleSelection() {
     const selection = window.getSelection();
-    this.props.actions.updateSelectedDocumentText(selection.anchorOffset, selection.focusOffset);
+    const start = selection.anchorOffset < selection.focusOffset ? selection.anchorOffset : selection.focusOffset;
+    const end = selection.anchorOffset < selection.focusOffset ? selection.focusOffset : selection.anchorOffset;
+    this.props.actions.updateSelectedDocumentText(start, end);
   }
 
   highlightText() {
