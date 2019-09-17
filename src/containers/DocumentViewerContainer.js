@@ -6,6 +6,7 @@ import DocumentViewerComponent from '../components/DocumentViewerComponent'
 
 const mapStateToProps = state => ({
   document: state.documentsReducer.document,
+  taggedSelections: state.documentsReducer.taggedSelections,
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -31,9 +31,17 @@ const handleTagSelectedText = (state, action) => {
     end: state.selection.end,
     tagId: action.payload.tagId,
   }
+  const earlierSelectionsIndex = state.taggedSelections.filter(s => (s.start < newTaggedSelection.start) || (s.start === newTaggedSelection.start && s.end <= newTaggedSelection.end)).length;
   return {
     ...state,
-    selection: {},
-    taggedSelections: [...state.taggedSelections, newTaggedSelection],
+    selection: {
+      start: null,
+      end: null,
+    },
+    taggedSelections: [ 
+      ...state.taggedSelections.slice(0, earlierSelectionsIndex),
+      newTaggedSelection,
+      ...state.taggedSelections.slice(earlierSelectionsIndex),
+    ]
   }
 }
