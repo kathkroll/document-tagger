@@ -18,7 +18,7 @@ export default class TagHierarchy extends Component {
 
     const tagTree = tags.map((tag) => {
       return (
-        <div key={tag.id} onClick={this.dispatchAddTag(tag.id)}>{tag.name}</div>
+        <div key={tag.id} onClick={this.dispatchAddTag(tag.id)}>{tag.name} ({tag.totalSelections})</div>
       );
     });
 
