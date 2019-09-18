@@ -2,12 +2,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to run the application (in development mode)
 
-1. ### Clone this repo
-2. ### In the directory, run `npm install`
-3. ### then run `npm start`
+1. #### Clone this repo
+2. #### In the directory, run `npm install`
+3. #### then run `npm start`
 
 ## How to run the tests
 
-### `npm test`
+#### `npm test`
 
 
