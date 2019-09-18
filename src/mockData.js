@@ -12,6 +12,14 @@ export default {
           {
             "id": 2,
             "name": "Disabled Peoples' Rights",
+          },
+          {
+            "id": 3,
+            "name": "Prisoners' Rights",
+          },
+          {
+            "id": 4,
+            "name": "Rights of the aged",
           }
         ],
       }   

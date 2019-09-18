@@ -28,15 +28,18 @@ export default class TagHierarchy extends Component {
           onClick={this.dispatchAddTag(tag.id)}
           className="tag-option"   
         >
-          <span className={classNames({'highlighted': this.isActiveTag(tag.id)})}>
-            {tag.name} ({tag.totalSelections})
+          <span>
+            <span className={classNames({'highlighted': this.isActiveTag(tag.id)})}>
+              {tag.name}
+            </span>
+            {tag.totalSelections > 0 && <span className="counter">{tag.totalSelections}</span>}
           </span>
         </div>
       );
     });
 
     return (
-      <div>
+      <div className="tag-tree">
         {tagTree}
       </div>
     );
