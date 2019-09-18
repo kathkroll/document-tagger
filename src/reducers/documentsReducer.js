@@ -21,7 +21,7 @@ const handleUpdateSelectedDocumentText = (state, action) => {
     selection: {
       start: action.payload.selectionStartIndex,
       end: action.payload.selectionEndIndex,
-    }
+    },
   }
 }
 

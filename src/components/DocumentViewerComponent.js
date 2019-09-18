@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import generateHighlightedSpans from '../utils/generateHighlightedSpans';
+import TagSelectionDrawer from './TagSelectionDrawer';
 
 export default class DocumentViewerComponent extends Component {
 
@@ -35,6 +36,7 @@ export default class DocumentViewerComponent extends Component {
         <div className="document-text" onMouseUp={this.handleSelection}>
           {this.props.document.text}
         </div>
+        <TagSelectionDrawer selectedTags={this.props.tagsAppliedToActiveSelection} />
       </div>
     );
   }

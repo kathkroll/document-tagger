@@ -11,13 +11,11 @@ export const addTagToSelectedText = (tagId) => {
 };
 
 export const updateSelectedDocumentText = (selectionStartIndex, selectionEndIndex) => {
-  if (selectionStartIndex !== selectionEndIndex) {
-    return {
-      type: UPDATE_SELECTED_DOCUMENT_TEXT,
-      payload: {
-        selectionStartIndex,
-        selectionEndIndex,
-      }
+  return {
+    type: UPDATE_SELECTED_DOCUMENT_TEXT,
+    payload: {
+      selectionStartIndex,
+      selectionEndIndex,
     }
   }
 }
