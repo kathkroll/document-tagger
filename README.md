@@ -10,4 +10,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 #### `npm test`
 
+## Thing I still want to do
+
+* LINTING
+* Add additional tests
+* Clean up the components and add propTypes everywhere
+* There are more that I'll remember shortly...
+
 
