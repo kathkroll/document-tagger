@@ -1,8 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## How to Run
 
-In the project directory, you can run:
+1. ### Clone this repo
+2. ### `npm install`
+3. ### `npm start`
 
 ### `npm start`
 
