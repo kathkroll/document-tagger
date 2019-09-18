@@ -25,7 +25,8 @@ export default class TagHierarchy extends Component {
       return (
         <div 
           key={tag.id} 
-          onClick={this.dispatchAddTag(tag.id)}   
+          onClick={this.dispatchAddTag(tag.id)}
+          className="tag-option"   
         >
           <span className={classNames({'highlighted': this.isActiveTag(tag.id)})}>
             {tag.name} ({tag.totalSelections})

@@ -3,11 +3,18 @@ import React, { Component } from 'react';
 const TagSelectionDrawer = ({ selectedTags, remove }) =>
   (
     <section className="drawer">
-      {selectedTags.map(tag => {
-        return (
-          <div key={tag.id}>{tag.name}<span onClick={() => remove(tag.id)}>X</span></div>
-        )
-      })}
+      <div className="tags-container">
+        {selectedTags.map(tag => {
+          return (
+            <span
+              key={tag.id}
+              className="tag-chip"
+            >{tag.name}
+              <span className="remove-btn" onClick={() => remove(tag.id)}>🞩</span>
+            </span>
+          );
+        })}
+      </div>
     </section>
   )
 
