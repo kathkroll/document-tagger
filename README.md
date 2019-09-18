@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[Quick Video Demo](https://www.loom.com/share/8b3fca4f1b704c6abbe5f16bab3bff34)
+
 ## How to run the application (in development mode)
 
 1. #### Clone this repo
