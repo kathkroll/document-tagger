@@ -2,6 +2,7 @@ import data from '../mockData';
 import { 
   UPDATE_SELECTED_DOCUMENT_TEXT,
   TAG_SELECTED_TEXT,
+  REMOVE_TAG,
 } from '../actions';
 
 export default (state = data.documentsReducer, action) => {
@@ -10,6 +11,8 @@ export default (state = data.documentsReducer, action) => {
       return handleUpdateSelectedDocumentText(state, action);
     case TAG_SELECTED_TEXT:
       return handleTagSelectedText(state, action);
+    case REMOVE_TAG:
+      return handleRemoveTag(state, action);
     default:
       return state;
   }
@@ -43,5 +46,15 @@ const handleTagSelectedText = (state, action) => {
       newTaggedSelection,
       ...state.taggedSelections.slice(earlierSelectionsIndex),
     ]
+  }
+}
+
+const handleRemoveTag = (state, action) => {
+  const tagToRemoveIndex = state.taggedSelections.findIndex(selection => {
+    return selection.tagId === action.payload.tagId && selection.start < state.selection.start && selection.end > state.selection.end;
+  });
+  return {
+    ...state,
+    taggedSelections: [...state.taggedSelections.slice(0, tagToRemoveIndex), ...state.taggedSelections.slice(tagToRemoveIndex + 1)],
   }
 }

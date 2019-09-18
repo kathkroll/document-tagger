@@ -38,7 +38,7 @@ export default class DocumentViewerComponent extends Component {
             {this.props.document.text}
           </div>
         </div>
-        <TagSelectionDrawer selectedTags={this.props.tagsAppliedToActiveSelection} />
+        <TagSelectionDrawer selectedTags={this.props.tagsAppliedToActiveSelection} remove={this.props.actions.removeTag} />
       </div>
     );
   }

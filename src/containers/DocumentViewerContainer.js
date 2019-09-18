@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { updateSelectedDocumentText } from '../actions';
+import { updateSelectedDocumentText, removeTag } from '../actions';
 import selectTagsForActiveSelection from '../selectors/selectTagsForActiveSelection';
 import DocumentViewerComponent from '../components/DocumentViewerComponent'
 
@@ -13,7 +13,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators({ updateSelectedDocumentText }, dispatch)
+  actions: bindActionCreators({ updateSelectedDocumentText, removeTag }, dispatch)
 })
 
 
