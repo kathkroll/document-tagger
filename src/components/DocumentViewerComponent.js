@@ -30,11 +30,13 @@ export default class DocumentViewerComponent extends Component {
   render() {
     return (
       <div className="document-container">
-        <div className="document-text non-selectable">
-          {this.highlightText()}
-        </div>
-        <div className="document-text" onMouseUp={this.handleSelection}>
-          {this.props.document.text}
+        <div className="overflow-container">
+          <div className="document-text non-selectable">
+            {this.highlightText()}
+          </div>
+          <div className="document-text" onMouseUp={this.handleSelection}>
+            {this.props.document.text}
+          </div>
         </div>
         <TagSelectionDrawer selectedTags={this.props.tagsAppliedToActiveSelection} />
       </div>

@@ -1,11 +1,17 @@
-export default (start, end, taggedSelections) => {
-  const tagIds = [];
+export default (start, end, taggedSelections, allTags) => {
+  const tags = [];
   if(start === end) {
     taggedSelections.forEach(s => {
       if (s.start < start && s.end > end) {
-        tagIds.push(s.tagId);
+        const tag = allTags.find(t => t.id === s.tagId);
+        if(tag) {
+          tags.push({
+            id: s.tagId,
+            name: tag.name,
+          });
+        }   
       }
     });
   }
-  return tagIds;
+  return tags;
 }

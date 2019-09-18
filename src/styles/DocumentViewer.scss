@@ -1,6 +1,12 @@
 .document-container {
   position: relative;
 
+  .overflow-container {
+    overflow: auto;
+    position: relative;
+    height: 100%;
+  }
+
   .document-text {
     line-height: 28px;
     position: absolute;

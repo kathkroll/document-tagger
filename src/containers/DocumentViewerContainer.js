@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
   document: state.documentsReducer.document,
   taggedSelections: state.documentsReducer.taggedSelections,
   tagsAppliedToActiveSelection: selectTagsForActiveSelection(state.documentsReducer.selection.start,
-    state.documentsReducer.selection.end, state.documentsReducer.taggedSelections),
+    state.documentsReducer.selection.end, state.documentsReducer.taggedSelections, state.tagsReducer.tagTrees[0].tags),
 })
 
 const mapDispatchToProps = dispatch => ({

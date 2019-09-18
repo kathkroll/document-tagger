@@ -5,7 +5,7 @@ const TagSelectionDrawer = ({ selectedTags }) =>
     <section className="drawer">
       {selectedTags.map(tag => {
         return (
-          <div>{tag}</div>
+          <div key={tag.id}>{tag.name}</div>
         )
       })}
     </section>
